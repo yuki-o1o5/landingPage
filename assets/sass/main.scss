@@ -1,0 +1,290 @@
+@import "abstracts/mixins";
+@import "abstracts/variables";
+@import "base/typography";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+.first-container {
+  margin-bottom: 5rem;
+  width: 100%;
+  height: 100%;
+  @include gridContainer;
+  grid-template-columns: 30% 70%;
+
+  .first-images-container {
+    @include gridContainer;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    .img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+  }
+
+  .main {
+    background-color: $primary;
+    margin-left: 1rem;
+    padding: 0 4rem;
+    @include flexContainer(column, center, flex-start);
+
+    .title-container {
+      @include flexContainer(row, flex-start, center);
+      margin-bottom: 2rem;
+    }
+    .first-title-phr {
+      margin: 0 0 0 1rem;
+    }
+    .title-detail {
+      margin-top: 2rem;
+    }
+  }
+}
+
+.second-container {
+  padding-left: 3rem;
+  margin-bottom: 5rem;
+
+  .title-container {
+    margin: 2rem 0;
+    @include flexContainer(flex, flex-start, center);
+
+    .second-title-detail {
+      margin-left: 3rem;
+    }
+  }
+
+  .scroll-content {
+    display: flex;
+    overflow-x: auto;
+  }
+
+  li {
+    width: 45%;
+    padding: 8px;
+    margin: 3px;
+    flex-shrink: 0;
+    list-style: none;
+
+    img {
+      width: 100%;
+      object-fit: fill;
+    }
+
+    .scroll-content-title {
+      margin: 2rem 0 1rem;
+    }
+
+    .scroll-content-detail {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .scroll-content::-webkit-scrollbar {
+    height: 12px; /* スクロールバーの高さ */
+  }
+
+  .scroll-content::-webkit-scrollbar-thumb {
+    background: #ba9a71; /* ツマミの色 */
+    border-radius: 6px; /* ツマミ両端の丸み */
+  }
+
+  .scroll-content::-webkit-scrollbar-track {
+    background: $primary; /* トラックの色 */
+    border-radius: 6px; /* トラック両端の丸み */
+  }
+}
+
+.third-container {
+  padding-left: 3rem;
+  margin-bottom: 5rem;
+
+  .card-container {
+    width: 100%;
+    margin-top: 3rem;
+    @include flexContainer(row, space-between, flex-start);
+
+    .card {
+      width: 30%;
+      background-color: beige;
+
+      .card-text-container {
+        margin: 3rem;
+        @include flexContainer(column, center, flex-start);
+
+        .card-title {
+          margin-top: 1rem;
+        }
+        .third-card-detail {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.fourth-container {
+  padding-left: 3rem;
+  margin-bottom: 5rem;
+
+  .products-container {
+    margin-top: 3rem;
+
+    .product {
+      width: 100%;
+      padding: 1rem;
+      @include flexContainer(row, space-between, flex-start);
+
+      .num {
+        width: 20%;
+        height: 200px;
+        font-size: 1.5rem;
+        @include flexContainer(row, center, center);
+      }
+
+      .product-img {
+        height: 200px;
+        width: 200px;
+        object-fit: cover;
+      }
+
+      .product-text {
+        width: 50%;
+        height: 200px;
+        @include flexContainer(column, center, flex-start);
+      }
+    }
+  }
+}
+
+.fifth-container {
+  padding-left: 3rem;
+  margin-bottom: 5rem;
+
+  form {
+    margin-top: 3rem;
+    width: 80%;
+
+    .form {
+      width: 100%;
+      @include flexContainer(row, flex-start, center);
+
+      label {
+        width: 15%;
+        font-size: 1.3rem;
+      }
+      input {
+        width: 85%;
+        padding: 0.5rem;
+        margin: 1rem;
+        font-size: 1.3rem;
+      }
+      .button {
+        border-radius: 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+  .first-container {
+    grid-template-columns: 40% 60%;
+
+    .first-images-container {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 5px;
+
+      .img {
+        height: 200px;
+      }
+    }
+
+    .main {
+      margin-left: 0.5rem;
+      padding: 0 1.5rem;
+    }
+  }
+
+  .third-container {
+    .card-container {
+      @include flexContainer(column, flex-start, center);
+
+      .card {
+        width: 100%;
+        margin: 1rem;
+
+        .card-text-container {
+          margin: 2rem;
+        }
+      }
+    }
+  }
+
+  .fourth-container {
+    padding-left: 3rem;
+    margin-bottom: 5rem;
+
+    .products-container {
+      .product {
+        width: 100%;
+        padding: 1rem;
+        @include flexContainer(row, space-between, flex-start);
+
+        .num {
+          width: 10%;
+          height: 200px;
+          font-size: 1.2rem;
+          @include flexContainer(row, center, flex-start);
+        }
+
+        .product-img {
+          height: 150px;
+          width: 110px;
+          object-fit: cover;
+        }
+
+        .product-text {
+          @include flexContainer(column, flex-start, flex-start);
+        }
+      }
+    }
+  }
+
+  .fifth-container {
+    form {
+      width: 100%;
+
+      .form {
+        label {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}

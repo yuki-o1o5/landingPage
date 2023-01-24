@@ -1,0 +1,18 @@
+@mixin flexContainer($flex-direction, $justify-content, $align-items) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin gridContainer {
+  display: grid;
+}
+
+@mixin img-one {
+  width: 280px;
+  height: 180px;
+}
+@mixin img-two {
+  height: 270px;
+}

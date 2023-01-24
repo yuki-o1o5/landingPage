@@ -1,0 +1,286 @@
+@charset "UTF-8";
+body {
+  font-family: "Merriweather", serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+.first-container {
+  margin-bottom: 5rem;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+.first-container .first-images-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.first-container .first-images-container .img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.first-container .main {
+  background-color: #f0ede9;
+  margin-left: 1rem;
+  padding: 0 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.first-container .main .title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.first-container .main .first-title-phr {
+  margin: 0 0 0 1rem;
+}
+.first-container .main .title-detail {
+  margin-top: 2rem;
+}
+
+.second-container {
+  padding-left: 3rem;
+  margin-bottom: 5rem;
+}
+.second-container .title-container {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.second-container .title-container .second-title-detail {
+  margin-left: 3rem;
+}
+.second-container .scroll-content {
+  display: flex;
+  overflow-x: auto;
+}
+.second-container li {
+  width: 45%;
+  padding: 8px;
+  margin: 3px;
+  flex-shrink: 0;
+  list-style: none;
+}
+.second-container li img {
+  width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.second-container li .scroll-content-title {
+  margin: 2rem 0 1rem;
+}
+.second-container li .scroll-content-detail {
+  margin-bottom: 2rem;
+}
+.second-container .scroll-content::-webkit-scrollbar {
+  height: 12px; /* スクロールバーの高さ */
+}
+.second-container .scroll-content::-webkit-scrollbar-thumb {
+  background: #ba9a71; /* ツマミの色 */
+  border-radius: 6px; /* ツマミ両端の丸み */
+}
+.second-container .scroll-content::-webkit-scrollbar-track {
+  background: #f0ede9; /* トラックの色 */
+  border-radius: 6px; /* トラック両端の丸み */
+}
+
+.third-container {
+  padding-left: 3rem;
+  margin-bottom: 5rem;
+}
+.third-container .card-container {
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.third-container .card-container .card {
+  width: 30%;
+  background-color: beige;
+}
+.third-container .card-container .card .card-text-container {
+  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.third-container .card-container .card .card-text-container .card-title {
+  margin-top: 1rem;
+}
+.third-container .card-container .card .card-text-container .third-card-detail {
+  margin-top: 1rem;
+}
+
+.fourth-container {
+  padding-left: 3rem;
+  margin-bottom: 5rem;
+}
+.fourth-container .products-container {
+  margin-top: 3rem;
+}
+.fourth-container .products-container .product {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.fourth-container .products-container .product .num {
+  width: 20%;
+  height: 200px;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.fourth-container .products-container .product .product-img {
+  height: 200px;
+  width: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.fourth-container .products-container .product .product-text {
+  width: 50%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.fifth-container {
+  padding-left: 3rem;
+  margin-bottom: 5rem;
+}
+.fifth-container form {
+  margin-top: 3rem;
+  width: 80%;
+}
+.fifth-container form .form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.fifth-container form .form label {
+  width: 15%;
+  font-size: 1.3rem;
+}
+.fifth-container form .form input {
+  width: 85%;
+  padding: 0.5rem;
+  margin: 1rem;
+  font-size: 1.3rem;
+}
+.fifth-container form .form .button {
+  border-radius: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.7rem;
+  }
+  h4 {
+    font-size: 1.2rem;
+  }
+  .first-container {
+    grid-template-columns: 40% 60%;
+  }
+  .first-container .first-images-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+  }
+  .first-container .first-images-container .img {
+    height: 200px;
+  }
+  .first-container .main {
+    margin-left: 0.5rem;
+    padding: 0 1.5rem;
+  }
+  .third-container .card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .third-container .card-container .card {
+    width: 100%;
+    margin: 1rem;
+  }
+  .third-container .card-container .card .card-text-container {
+    margin: 2rem;
+  }
+  .fourth-container {
+    padding-left: 3rem;
+    margin-bottom: 5rem;
+  }
+  .fourth-container .products-container .product {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .fourth-container .products-container .product .num {
+    width: 10%;
+    height: 200px;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .fourth-container .products-container .product .product-img {
+    height: 150px;
+    width: 110px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .fourth-container .products-container .product .product-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .fifth-container form {
+    width: 100%;
+  }
+  .fifth-container form .form label {
+    font-size: 1.2rem;
+  }
+}/*# sourceMappingURL=main.css.map */
