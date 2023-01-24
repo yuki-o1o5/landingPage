@@ -20,6 +20,8 @@ function setTel(event) {
 function setSubmit(event) {
   event.preventDefault();
   console.log(newUser);
-  userList.push(newUser);
+
+  let newUserObject = JSON.parse(JSON.stringify(newUser));
+  userList.push(newUserObject);
   console.log(userList, "Total Users!");
 }
